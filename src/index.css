@@ -1,13 +1,24 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "tailwindcss";
 
-ul {
-  list-style: none;
-}
+@tailwind utilities;
 
-a {
-  text-decoration: none;
+@layer components {
+    .how-it-works {
+        @apply px-6 py-3 bg-red-100 rounded-lg;
+    }
+
+    .glow-text-2 {
+        @apply [text-shadow:-1px_-1px_2px_white,1px_1px_2px_black];
+    }
+
+    .clamp-header{
+        font-size: clamp(1.8rem, calc(7vw + 1rem), 5rem);
+    }
+
+    .carved{
+        background-color: #3a3a39;
+        color: transparent;
+        background-clip: text;
+        text-shadow: 0px 2px 1px rgba(255, 255, 255, .32);
+    }
 }
